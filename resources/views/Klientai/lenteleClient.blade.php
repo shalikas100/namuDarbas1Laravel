@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Lentelės kūrimas. Duomenys is db.</h1>
+<h1>Lentelės kūrimas. Duomenys is db. Klientai.</h1>
 <table>
     <tr>
         <th>ID</th>
@@ -26,6 +26,5 @@
     </tr>
     @endforeach
 </table>
-    
 </body>
 </html>

@@ -2,30 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Client;
+use App\Company;
 use Illuminate\Http\Request;
 
-class ClientController extends Controller
+class CompanyController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function sandauga(){
-
-        $a = 3;
-        $b = 5;
-        $sandauga = $a * $b;
-
-        return view('/namuDarbas1', ['sandauga' => $sandauga, 'a' => $a, 'b' => $b]);
-    }
-    
-    
-     public function index()
+    public function index()
     {
-        $klientai = Client::all();
-        return view('Klientai.lenteleClient',compact('klientai'));
+        $kompanijos = Company::all();
+
+    return view('kompanijos.lenteleCompany', ['kompanijos' => $kompanijos]);
     }
 
     /**
@@ -36,7 +27,6 @@ class ClientController extends Controller
     public function create()
     {
         //
-        echo "Kliento Kurimas. create metodas";
     }
 
     /**
@@ -53,35 +43,33 @@ class ClientController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Client  $client
+     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function show(Client $client)
+    public function show(Company $company)
     {
         //
-        echo "Atvaizduoju. show metodas";
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Client  $client
+     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function edit(Client $client)
+    public function edit(Company $company)
     {
         //
-        echo "Redaguoju klienta. edit metodas";
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Client  $client
+     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Client $client)
+    public function update(Request $request, Company $company)
     {
         //
     }
@@ -89,10 +77,10 @@ class ClientController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Client  $client
+     * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Client $client)
+    public function destroy(Company $company)
     {
         //
     }

@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Client;
+use App\Company;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,8 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+    
         factory(App\Client::class, 500)->create();
-        // $this->call([ka_parasyti_cia?::class]);
+       
+        factory(App\Company::class, 139)->create();
     }
 }

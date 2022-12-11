@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ClientController; // Irasyta rankiniu budu
 use Illuminate\Support\Facades\Route; // Irasyta rankiniu budu
 
@@ -29,7 +30,8 @@ Route::get('/metodas/show','ClientController@show'); //veikia
 Route::get('/metodas/edit','ClientController@edit'); // veikia
 Route::get('/metodas/edit2', [ClientController::class, 'edit']);
 Route::get('/metodas/sandauga',[ClientController::class, 'sandauga']);
-Route::get('/metodas/lentele', [ClientController::class, 'index']);
+Route::get('/metodas/lentele/klientai', [ClientController::class, 'index']);
+Route::get('/metodas/lentele/kompanijos', [CompanyController::class, 'index']);
 
 
 
